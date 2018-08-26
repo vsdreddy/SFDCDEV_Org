@@ -1,0 +1,25 @@
+<apex:page controller="NewAccountCreationControler" >
+    <apex:form >
+        <apex:messages />
+    	<apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!saveRecord}" />
+                <apex:commandButton value="Cancle" action="{!cancleRecord}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account">
+                <apex:inputText label="Account Name: " id="accname" value="{!AccountName}" />
+                <apex:inputText label="PAN :" id="pax" value="{!panNumber}" />
+			</apex:pageBlockSection>
+            <apex:pageBlockSection title="Contacts">
+                <apex:pageBlockTable value="{!cnt}" var="contact" >
+                    <apex:column title="First Name"   >
+                    	<apex:inputText id="firstname" value="{!contact.firstName}" />
+                    </apex:column>
+                    <apex:column title="Last Name"  >
+                    	<apex:inputText id="lastname" value="{!contact.lastName}" />
+                    </apex:column>
+                </apex:pageBlockTable>
+			</apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>
