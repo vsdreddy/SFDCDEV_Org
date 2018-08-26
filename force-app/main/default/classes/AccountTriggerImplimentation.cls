@@ -16,7 +16,7 @@ public void afterUpdate(List<Account> acc){
         for(Account a:acc){
             c.add(new Contact(
                 FirstName=a.Name,
-                LastName='Name',
+                LastName='Sample Name',
                 Accountid = a.id
             ));
         }
